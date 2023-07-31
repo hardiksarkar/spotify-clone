@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify Clone</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="spotify-clone.css" />
+  </head>
+  <body>
+    <div id="main-body">
+      <!-- header div  -->
+      <div>
+        <header class="d-flex flex-column">
+          <div class="p-4 py-5 spotify-logo">
+            <img src="./logos-and-icons/Spotify logo.png" alt="" />
+          </div>
+          <div id="scroll-div-main">
+            <div id="scroll-div" class="ps-4">
+              <div class="text-light mx-2 header-sec-1 mb-4">
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <i class="me-3"
+                    ><img src="./logos-and-icons/home-icon.png" alt=""
+                  /></i>
+                  <h5 class="card-title">Home</h5>
+                </div>
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <i class="me-3"
+                    ><img src="./logos-and-icons/search-icon.png" alt=""
+                  /></i>
+                  <h5 class="card-title">Search</h5>
+                </div>
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <i class="me-3"
+                    ><img src="./logos-and-icons/library-icon.png" alt=""
+                  /></i>
+                  <h5 class="card-title">Your Library</h5>
+                </div>
+              </div>
+              <div class="text-light mx-2 header-sec-2 mb-4">
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <div class="create-playlist me-3">
+                    <i
+                      ><img src="./logos-and-icons/create-playlist.png" alt=""
+                    /></i>
+                  </div>
+                  <h5 class="card-title">Create Playlist</h5>
+                </div>
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <div class="liked-songs me-3">
+                    <i class="fa-solid fa-heart"></i>
+                  </div>
+                  <h5 class="card-title" onclick="playList()">Liked Songs</h5>
+                </div>
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <div class="your-episodes me-3">
+                    <i
+                      ><img src="./logos-and-icons/your-episodes.png" alt=""
+                    /></i>
+                  </div>
+                  <h5 class="card-title">Your Episodes</h5>
+                </div>
+              </div>
+              <div class="text-light mx-2 header-section-3 mb-5">
+                <h5 class="mb-1 p-2">FAV</h5>
+                <h5 class="mb-1 p-2">Daily Mix 1</h5>
+                <h5 class="mb-1 p-2">Discover Weekly</h5>
+                <h5 class="mb-1 p-2">Malayalam</h5>
+                <h5 class="mb-1 p-2">Dance / Electronix Mix</h5>
+                <h5 class="mb-1 p-2">EDM / Popular</h5>
+              </div>
+              <div class="text-light mx-2 mb-4 header-section-4">
+                <div class="d-flex align-items-center mb-1 p-2">
+                  <i class="me-5"
+                    ><img src="./logos-and-icons/install-app.png" alt=""
+                  /></i>
+                  <h5>Install App</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </header>
+      </div>
+      <!-- content div  -->
+      <div id="content-div">
+        <!-- navbar  -->
+        <nav class="d-flex justify-content-between p-3 sticky-top">
+          <div class="d-flex" id="next-prev">
+            <div role="button" class="me-3"><i class="fa-solid fa-chevron-left"></i></div>
+            <div role="button" onclick="playList(this)"><i class="fa-solid fa-chevron-right"></i></div>
+          </div>
+          <div id="user-account" class="d-flex align-items-center">
+            <img src="./logos-and-icons/account-image.png" alt="" class="pe-2">
+            <p class="m-0 text-light pe-2">Angel</p>
+            <i role="button" class="fa-solid fa-caret-down text-light pe-3"></i>
+          </div>
+        </nav>
+        <main class="mx-5 my-4">
+
+          <!-- good morning section  -->
+
+          <section id="good-morning">
+            <h2 class="text-light fw-bold">Good morning</h2>
+            <div class="d-flex flex-wrap mt-4">
+              <div class="d-flex align-items-center" onclick="playList(this)">
+                <div class="liked-songs me-3">
+                  <i class="fa-solid fa-heart text-white"></i>
+                </div>
+                <p class="text-white m-0 pe-2" id="liked-Songs">Liked Songs</p>
+                <img class="play-btn" src="./logos-and-icons/thumb_play.png" alt="">
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="me-3" src="./images/sec-1-img-1.jpg" alt="">
+                <p class="text-white m-0 pe-2">Neffex Playlist</p>
+                <img class="play-btn" src="./logos-and-icons/thumb_play.png" alt="">
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="me-3" src="./images/sec-1-img-2.jpg" alt="">
+                <p class="text-white m-0 pe-2">K/ DA</p>
+                <img class="play-btn" src="./logos-and-icons/thumb_play.png" alt="">
+              </div>
+              <div class="d-flex align-items-center">
+                <img class="me-3" src="./images/sec-1-img-3.png" alt="">
+                <p class="text-white m-0 pe-2">Dance / Electronic Mix</p>
+                <img class="play-btn" src="./logos-and-icons/thumb_play.png" alt="">
+              </div>
+            </div>
+          </section>
+
+          <!-- recommended section  -->
+
+          <section id="recom-section">
+            <div class="d-flex align-items-center justify-content-between">
+              <h4 class="text-light my-4 fw-bold">Recommended for today</h4>
+              <p class="text-white m-0">Show All</p>
+            </div>
+            <div class="d-flex flex-wrap">
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-1.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">Weekly Motivatio...</h6>
+                  <p class="mb-0">Ben Ina Scott</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-2.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">MEDITATION SELF</h6>
+                  <p class="mb-0">Ibn Hussain Aleen</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-3.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">Words beyond act...</h6>
+                  <p class="mb-0">Samuel Scott</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-4.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">The Alexa Show</h6>
+                  <p class="mb-0">Adriana Tom</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Trending now near you  -->
+
+          <section id="trending-section">
+            <div class="d-flex align-items-center justify-content-between">
+              <h4 class="text-light my-4 fw-bold">Trending now near you</h4>
+              <p class="text-white m-0">Show All</p>
+            </div>
+            <div class="d-flex flex-wrap">
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-1.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">Weekly Motivatio...</h6>
+                  <p class="mb-0">Ben Ina Scott</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-2.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">MEDITATION SELF</h6>
+                  <p class="mb-0">Ibn Hussain Aleen</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-3.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">Words beyond act...</h6>
+                  <p class="mb-0">Samuel Scott</p>
+                </div>
+              </div>
+              <div class="card recom-cards" style="width: 13rem;">
+                <img src="./images/recom-img-4.png" class="card-img-top p-3 pb-0" alt="...">
+                <div class="card-body p-3 text-light">
+                  <h6 class="mb-1">The Alexa Show</h6>
+                  <p class="mb-0">Adriana Tom</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- footer div  -->
+
+          <section>
+            <div class="d-flex justify-content-between align-items-center px-3 py-3" id="footer-div">
+              <!-- song  -->
+              <div id="footer-song" class="d-flex align-items-center">
+                <img src="./images/footer-song-img.png" alt="" class="pe-3">
+                <div class="text-light pe-4">
+                  <h5 class="m-0">Dreaming On</h5>
+                  <p class="m-0">NEFFEX</p>
+                </div>
+                <i class="fa-solid fa-heart"></i>
+              </div>
+              <!-- audio controls  -->
+              <div class="d-flex flex-column align-items-center">
+                <div id="footer-controls-up">
+                  <i class="fa-solid fa-shuffle"></i>
+                  <i class="fa-solid fa-backward-step"></i>
+                  <i class="fa-solid fa-circle-play"></i>
+                  <i class="fa-solid fa-forward-step"></i>
+                  <i class="fa-solid fa-repeat"></i>
+                </div>
+                <div id="footer-controls-down" class="d-flex align-items-center mt-2 text-light">
+                  <p class="m-0">2:11</p>
+                  <div class="mx-3">
+                    <div></div>
+                    <div></div>
+                  </div>
+                  <p class="m-0">2:42</p>
+                </div>
+              </div>
+
+              <!-- more options  -->
+              <div id="more-options" class="d-flex align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" width="21" height="23" viewBox="0 0 21 23" fill="none">
+                  <path d="M16.4618 10.6023C17.1456 9.40837 17.3747 7.96132 17.0987 6.57944C16.8226 5.19756 16.0641 3.99405 14.9899 3.23366C13.9157 2.47326 12.6139 2.21828 11.3707 2.5248C10.1276 2.83133 9.04508 3.67424 8.36125 4.86813L8.32431 4.92285L8.29533 4.98321C7.63212 6.16534 7.4132 7.58983 7.6857 8.94988C7.7217 9.13656 7.76762 9.3207 7.82322 9.50135L4.42409 18.0938C4.32109 18.3538 4.30534 18.6462 4.37971 18.918C4.45408 19.1897 4.61362 19.4229 4.8294 19.5752L5.96842 20.3814C6.18379 20.5344 6.44134 20.5965 6.69432 20.5564C6.94731 20.5163 7.17898 20.3768 7.34728 20.1631L12.9129 13.1042C13.0837 13.0838 13.2532 13.0521 13.4206 13.0094C14.6444 12.7086 15.7129 11.8855 16.3959 10.7173L16.4328 10.6626L16.4618 10.6023ZM16.0285 6.89273C16.2045 7.76835 16.1184 8.6838 15.7834 9.49994L9.5467 5.08517C9.99789 4.49876 10.5873 4.0639 11.2487 3.82947C11.9101 3.59504 12.6173 3.57033 13.2907 3.75813C13.9641 3.94592 14.5771 4.33877 15.0608 4.89251C15.5444 5.44626 15.8796 6.13895 16.0285 6.89273ZM6.54139 19.3811L5.40238 18.5748L8.45305 10.8741C9.18226 12.0188 10.2861 12.8002 11.5276 13.0505L6.54139 19.3811ZM8.72856 8.69273C8.55266 7.81711 8.63874 6.90166 8.97372 6.08552L9.5467 5.08517L15.7834 9.49994C15.3322 10.0864 14.1698 11.5216 13.5084 11.756C12.847 11.9904 12.1398 12.0151 11.4664 11.8273C10.793 11.6395 10.18 11.2467 9.69635 10.6929C9.21269 10.1392 8.87753 9.44651 8.72856 8.69273Z" fill="#C4C4C4"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32" fill="none">
+                  <path d="M9.73438 19H25.9259V21H9.73438V19Z" fill="#C4C4C4"/>
+                  <path d="M17.8301 14H25.9259V16H17.8301V14Z" fill="#C4C4C4"/>
+                  <path d="M9.73438 24H25.9259V26H9.73438V24Z" fill="#C4C4C4"/>
+                  <path d="M9.73438 9L15.1316 13.5L9.73438 18V9Z" fill="#C4C4C4"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="24" viewBox="0 0 22 24" fill="none">
+                  <path d="M17.6582 18.0037H4.16522C3.80747 18.0033 3.46448 17.8451 3.21151 17.5639C2.95855 17.2827 2.81628 16.9014 2.81592 16.5037V6.00366C2.81628 5.60596 2.95855 5.22466 3.21151 4.94344C3.46448 4.66222 3.80747 4.50406 4.16522 4.50366H17.6582C18.0159 4.50406 18.3589 4.66222 18.6119 4.94344C18.8649 5.22466 19.0071 5.60596 19.0075 6.00366V16.5037C19.0069 16.9013 18.8646 17.2825 18.6117 17.5637C18.3588 17.8448 18.0159 18.0031 17.6582 18.0037ZM4.16522 6.00366V16.5037H17.6582V6.00366H4.16522Z" fill="#1B9145"/>
+                  <path d="M1.4668 19.5037H20.357V21.0037H1.4668V19.5037Z" fill="#1B9145"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none" id="volume">
+                  <path d="M12.6922 2.24988C12.6922 1.17088 11.5462 0.599884 10.8212 1.31588L6.77958 5.30888C6.65622 5.43106 6.49683 5.49866 6.33161 5.49888H3.02224C2.48545 5.49888 1.97065 5.73594 1.59109 6.15789C1.21153 6.57985 0.998291 7.15215 0.998291 7.74888V12.2459C0.998291 12.8426 1.21153 13.4149 1.59109 13.8369C1.97065 14.2588 2.48545 14.4959 3.02224 14.4959H6.33251C6.49772 14.4961 6.65712 14.5637 6.78048 14.6859L10.8203 18.6799C11.5453 19.3959 12.6922 18.8239 12.6922 17.7459V2.24988ZM7.67731 6.42988L11.3429 2.80688V17.1889L7.67731 13.5649C7.30687 13.1985 6.82834 12.996 6.33251 12.9959H3.02224C2.84331 12.9959 2.67171 12.9169 2.54519 12.7762C2.41867 12.6356 2.34759 12.4448 2.34759 12.2459V7.74988C2.34759 7.55097 2.41867 7.36021 2.54519 7.21955C2.67171 7.0789 2.84331 6.99988 3.02224 6.99988H6.33251C6.82834 6.99974 7.30687 6.79727 7.67731 6.43088V6.42988Z" fill="#B3B3B3"/>
+                  <path d="M16.2832 3.89678C16.3545 3.83821 16.4354 3.79581 16.5214 3.772C16.6073 3.74819 16.6967 3.74344 16.7843 3.75802C16.8719 3.7726 16.9561 3.80622 17.032 3.85697C17.108 3.90771 17.1742 3.97459 17.2269 4.05378C18.3739 5.77367 18.9919 7.85873 18.989 9.99978C18.9915 12.1409 18.3733 14.226 17.226 15.9458C17.1173 16.0985 16.9594 16.1983 16.7857 16.2239C16.6121 16.2496 16.4363 16.1991 16.2955 16.0833C16.1546 15.9674 16.0599 15.7952 16.0313 15.6031C16.0026 15.4109 16.0424 15.2139 16.142 15.0538C17.1173 13.5921 17.6425 11.8197 17.6397 9.99978C17.6425 8.17987 17.1173 6.40747 16.142 4.94578C16.0893 4.86659 16.0512 4.77664 16.0298 4.68107C16.0084 4.5855 16.0041 4.48617 16.0172 4.38876C16.0303 4.29135 16.0606 4.19777 16.1062 4.11335C16.1519 4.02894 16.212 3.95535 16.2832 3.89678Z" fill="#B3B3B3"/>
+                  <path d="M14.6198 6.36978C14.6977 6.32281 14.7832 6.29336 14.8713 6.28312C14.9595 6.27287 15.0486 6.28204 15.1335 6.31008C15.2185 6.33813 15.2976 6.3845 15.3665 6.44657C15.4353 6.50863 15.4924 6.58515 15.5347 6.67178C16.0168 7.66178 16.2903 8.79678 16.2903 9.99978C16.2918 11.1618 16.032 12.3058 15.5347 13.3278C15.4495 13.5028 15.3053 13.6331 15.1337 13.6899C14.9621 13.7467 14.7773 13.7255 14.6198 13.6308C14.4624 13.5361 14.3452 13.3758 14.2941 13.185C14.243 12.9943 14.2621 12.7888 14.3473 12.6138C14.7251 11.8368 14.941 10.9478 14.941 9.99978C14.941 9.05178 14.7251 8.16278 14.3473 7.38578C14.3051 7.29911 14.2786 7.20405 14.2695 7.10603C14.2603 7.008 14.2686 6.90893 14.294 6.81448C14.3193 6.72003 14.3611 6.63205 14.417 6.55557C14.4729 6.4791 14.5418 6.41562 14.6198 6.36878V6.36978Z" fill="#B3B3B3"/>
+                </svg>
+                <div class="mx-2">
+                  <div></div>
+                  <div></div>
+                </div>
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+              </div>
+            </div>
+            <div class="d-flex align-items-center justify-content-end px-5" id="footer-label">
+              <i class="fa-solid fa-volume-high"></i>
+              <p class="m-0 ps-2 pe-5 fw-bold">Listening on ASUS-ROG-G531GT</p>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script>
+      const playList =()=>{
+        addEventListener('click',()=>{
+        window.location.replace("playlist.html");
+      })
+      } 
+      </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

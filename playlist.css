@@ -1,0 +1,154 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* playlist main div  */
+
+#playlist-main-div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+/* playlist scroll div  */
+
+#scroll-div {
+  height: 110vh;
+}
+#scroll-div-main {
+  height: 73vh;
+}
+
+/* scroll-bar style  */
+
+#scroll-div-main::-webkit-scrollbar {
+  width: 7px;
+}
+#scroll-div-main::-webkit-scrollbar-thumb {
+  background-color: #1f1f1f;
+  border-radius: 5px;
+}
+
+#scroll-div-main::-webkit-scrollbar-thumb:hover {
+  background-color: #292929;
+}
+
+/* playlist content div  */
+
+#playlist-content-div{
+     height: 88vh;
+    overflow-y: scroll;
+  }
+
+  /* navbar  */
+
+#playlist-content-div>nav{
+    background-color: #303030;
+    z-index: 1;
+  }
+  
+  #playlist-content-div>nav>div:nth-child(1)>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    background-color: #131313;
+    border-radius: 50%;
+  }
+  
+  #playlist-content-div>nav>div:nth-child(1)>div>i{
+    color: white;
+  }
+
+/* scroll bar  */
+
+#playlist-content-div::-webkit-scrollbar{
+    width: 10px;
+  }
+  
+  #playlist-content-div::-webkit-scrollbar-thumb{
+    background-color: #292929;
+  }
+  #playlist-content-div::-webkit-scrollbar-thumb:hover{
+    background-color: #3c3c3c;
+  }
+
+/* section 1 */
+#section-1 {
+  background: linear-gradient(180deg, #90aea7 0%, #000 100%);
+}
+
+/* div 1  */
+
+#section-1 > div:nth-child(1) {
+  height: 22rem;
+}
+
+#section-1 > div:nth-child(1) > img {
+  width: 14rem;
+}
+#section-1 > div:nth-child(1) > div > h1:nth-child(2) {
+  font-size: 5rem;
+}
+
+#section-1 > div:nth-child(1) > div i {
+  font-size: 0.3rem;
+}
+
+/* div 2 */
+
+#section-1 > div:nth-child(2) {
+  background-color: #00000029;
+}
+
+#section-1 > div:nth-child(2) > img {
+  width: 3rem;
+  transition: all 0.1s linear;
+}
+#section-1 > div:nth-child(2) > i {
+  color: #c4c4c4;
+  font-size: 2rem;
+  transition: all 0.1s linear;
+}
+#section-1 > div:nth-child(2) > *:hover,#footer-song>i:hover{
+  color: white;
+  transform: scale(1.1);
+}
+
+/* section 3 */
+
+/* table  */
+
+#table * {
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.table-p {
+  font-size: 0.8rem;
+}
+
+#table > tbody tr:hover{
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* footer  */
+
+#footer-div{
+    bottom: 0px;
+  }
+
+  #footer-song>div>h5{
+    font-size: 1rem;
+  }
+  #footer-song>div>p{
+    font-size: 0.8rem;
+  }
+
+  #footer-song>i,#footer-song>svg rect{
+    color: #c4c4c4;
+    stroke: white;
+    transition: all 0.1s linear;
+  }
