@@ -6,7 +6,7 @@ Welcome to my Spotify Clone project! This project aims to recreate the popular m
 
 1. **Home Page:** Mimics the Spotify home page, showcasing recommended playlists, new releases, and recommended tracks.
 
-2. **Playlist Page:** Displays playlists, including a "See All" button to view all playlists.
+2. **Playlist Page:** Displays playlists, including a "Show All" button to view all playlists.
 
 3. **Responsive Design:** The application is designed to work seamlessly on tablets and larger screens, ensuring a consistent user experience across devices.
 
@@ -32,7 +32,7 @@ Follow these steps to get the project up and running on your local machine:
 
 ## Usage
 
-Feel free to explore the various pages, hover effects, and transitions. Click the "See All" button to navigate to the playlist page. Experience the responsive design by resizing your browser window or using a tablet device.
+Feel free to explore the various pages, hover effects, and transitions. Click the "Show All" button to navigate to the playlist page. Experience the responsive design by resizing your browser window or using a tablet device.
 
 ## Contributing
 
