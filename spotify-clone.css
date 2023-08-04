@@ -324,3 +324,156 @@ body {
   bottom: 0px;
   right: 0px;
 }
+
+
+/* media querries  */
+
+@media all and (min-width:880px) and (max-width:1280px) {
+  #good-morning>div>div{
+    flex: 0 0 46%;
+  }
+  #footer-controls-up>i, #more-options>i,.fa-caret-down{
+    font-size: 1rem;
+  }
+  .fa-circle-play{
+    font-size: 1.8rem !important;
+  }
+  #footer-controls-down>div{
+    height: 0.3rem;
+    width: 28rem;
+  }
+  #more-options>svg{
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  #more-options>div{
+    width: 5rem;
+  }
+  #footer-label>p{
+    font-size: 0.8rem;
+  }
+  #footer-song>img{
+    width: 4rem;
+  }
+  #footer-song>div h5{
+    font-size: 1rem;
+  }
+  #footer-song>div p{
+    font-size: 0.6rem;
+  }
+}
+
+@media all and (min-width:880px) and (max-width:1050px){
+  #footer-controls-up>i, #more-options>i,.fa-caret-down{
+    font-size: 0.9rem;
+    padding: 0px 0.5rem;
+  }
+  #footer-div{
+    bottom: 12px;
+    /* background-color: #004638; */
+  }
+  .fa-circle-play{
+    font-size: 1.6rem !important;
+  }
+  #footer-controls-down>div{
+    height: 0.2rem;
+    width: 20rem;
+  }
+  #more-options>svg{
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+  #more-options>div{
+    width: 4rem;
+  }
+  #footer-label>p{
+    font-size: 0.6rem;
+  }
+  #footer-song>img{
+    width: 3rem;
+  }
+  #footer-song>div h5{
+    font-size: 0.9rem;
+  }
+  #footer-song>div p{
+    font-size: 0.7rem;
+  }
+  #scroll-div-main{
+    height: 67vh;
+  }
+  #content-div{
+    height: 87vh;
+  }
+  #install-app{
+    font-size: 1rem;
+  }
+  #header-div-4 h5{
+    font-size: 1rem;
+  }
+}
+
+@media all and (max-width:880px){
+  #good-morning>div>div{
+    flex: 0 0 90%;
+  }
+  #footer-controls-up>i, #more-options>i,.fa-caret-down{
+    font-size: 0.7rem;
+    padding: 0px 0.4rem;
+  }
+  .fa-circle-play{
+    font-size: 1.4rem !important;
+  }
+  #footer-controls-down>div{
+    height: 0.15rem;
+    width: 15rem;
+  }
+  #footer-controls-down>p{
+    font-size: 0.7rem;
+  }
+  #more-options>svg{
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 1px;
+  }
+  #more-options>div{
+    width: 2rem;
+  }
+  #footer-label>p{
+    font-size: 0.5rem;
+  }
+  #footer-song>img{
+    width: 3rem;
+  }
+  #footer-song>i{
+    font-size:0.9rem;
+  }
+  #footer-song>div h5{
+    font-size: 0.8rem;
+  }
+  #footer-song>div p{
+    font-size: 0.5rem;
+  }
+  #scroll-div-main{
+    height: 70vh;
+  }
+  #content-div{
+    height: 90vh;
+  }
+  #install-app,#header-div-4 h5, #scroll-div>div>div>h5{
+    font-size: 0.9rem;
+  }
+}
+
+@media all and (min-width:740px) and (max-width:880px){
+  #good-morning>div>div{
+    flex: 0 0 50vw;
+  }
+  #recom-section>div .card,#trending-section>div .card{
+    width: 11rem !important;
+  }
+}
+@media all and (max-width:740px){
+  #recom-section>div .card,#trending-section>div .card{
+    width: 10rem !important;
+  }
+}
