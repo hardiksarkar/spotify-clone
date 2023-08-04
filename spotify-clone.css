@@ -459,7 +459,7 @@ body {
   #content-div{
     height: 90vh;
   }
-  #install-app,#header-div-4 h5, #scroll-div>div>div>h5{
+  #install-app,#header-div-4 h5, #scroll-div>div>div>h5:not(#playlist){
     font-size: 0.9rem;
   }
 }
