@@ -25,9 +25,11 @@ Welcome to my Spotify Clone project! This project aims to recreate the popular m
 
 Follow these steps to get the project up and running on your local machine:
 
-1. **Clone the Repository:** Use the following command to clone the repository to your local machine. -> git clone https://github.com/hardiksarkar/spotify-clone.git
+1. **Clone the Repository:** Use the following command to clone the repository to your local machine. -> <code>git clone https://github.com/hardiksarkar/spotify-clone.git<code>
 2. **Open in a Browser:** Simply open the `index.html` file in your preferred web browser to view the home page of the Spotify Clone.
-   or
+   
+   ### or
+   
    you can directly view it here : https://hardiksarkar.github.io/spotify-clone/index.html
 
 ## Usage
